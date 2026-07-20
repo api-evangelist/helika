@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.helika.io/reference/create_event_v1_events_post
+docs: https://docs.helika.io/docs/getting-started
+note: >-
+  The published OpenAPI (openapi/helika-events-openapi.json) does not declare a
+  components.securitySchemes object; the API key is modeled as a required
+  x-api-key request header. This profile is captured from the Helika API
+  reference documentation, which documents x-api-key header authentication.
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+  oauth2_flows: []
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: x-api-key
+  required: true
+  description: >-
+    API key issued from the Helika platform (platform.helika.io), sent on every
+    request as the x-api-key header. The SDKs support both DEV and PROD keys.
+  sources:
+  - https://docs.helika.io/reference/create_event_v1_events_post
