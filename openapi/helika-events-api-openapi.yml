@@ -1,0 +1,150 @@
+openapi: 3.1.0
+info:
+  title: Helika Analytics Service Events API
+  version: 1.1.1
+tags:
+- name: Events
+paths:
+  /events/:
+    post:
+      tags:
+      - Events
+      summary: Create Events
+      operationId: create_events_events__post
+      parameters:
+      - name: user-agent
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: User-Agent
+      - name: x-forwarded-for
+        in: header
+        required: false
+        schema:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: X-Forwarded-For
+      - name: x-api-key
+        in: header
+        required: true
+        schema:
+          type: string
+          description: API key
+          title: X-Api-Key
+        description: API key
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventRequest'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+components:
+  schemas:
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    EventRequest:
+      properties:
+        id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Id
+          description: Unique identifier this request
+        events:
+          items:
+            $ref: '#/components/schemas/Event'
+          type: array
+          title: Events
+      type: object
+      required:
+      - events
+      title: EventRequest
+    Event:
+      properties:
+        created_at:
+          type: string
+          format: date-time
+          title: Created At
+          description: Timestamp of the event.
+        game_id:
+          type: string
+          title: Game Id
+          description: Unique identifier for the game.
+        event_type:
+          type: string
+          title: Event Type
+          description: The type of event, e.g. game_start, game_end, etc.
+        event:
+          type: object
+          title: Event
+          description: JSON object containing the event data.
+      type: object
+      required:
+      - game_id
+      - event_type
+      - event
+      title: Event
+    StatusEnum:
+      type: string
+      enum:
+      - ok
+      - error
+      - accepted
+      title: StatusEnum
+    Response:
+      properties:
+        message:
+          type: string
+          title: Message
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+      type: object
+      required:
+      - message
+      - status
+      title: Response
