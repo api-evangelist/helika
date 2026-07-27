@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/helika-events-openapi.json
+docs: https://docs.helika.io/docs/getting-started
+note: >-
+  Cross-cutting request/response semantics derived from the OpenAPI and the
+  Helika docs. Idempotency is NOT emitted as a scored pointer: the EventRequest
+  carries an optional request `id` described as a "Unique identifier this
+  request" (usable for client-side dedup), but Helika does not document a formal
+  Idempotency-Key header or retention/replay contract.
+authentication:
+  style: api-key-header
+  header: x-api-key
+  see: authentication/helika-authentication.yml
+environments:
+  note: >-
+    The SDKs target both DEV and PROD endpoints (per the helika-sdk npm
+    description); the documented production ingestion host is
+    https://events.analytics.helika.io. No public DEV host or test key values
+    are published, so no sandbox artifact is captured.
+batching:
+  supported: true
+  field: events
+  description: Multiple events are submitted per request in the events[] array.
+request_dedup:
+  field: id
+  location: request body (EventRequest.id)
+  description: >-
+    Optional client-supplied unique identifier for the request; enables
+    client-side deduplication. Not a documented idempotency contract.
+tracing:
+  headers:
+  - user-agent
+  - x-forwarded-for
+  note: Both are optional headers accepted by the ingestion endpoint.
+pagination:
+  supported: false
+  note: Single write-only ingestion endpoint; no collection reads to paginate.
+error_envelope:
+  schema: HTTPValidationError
+  see: errors/helika-problem-types.yml
+rate_limiting:
+  signaled: unknown
+  note: No rate-limit headers or documented limits found.
+versioning:
+  see: lifecycle/helika-lifecycle.yml

@@ -1,0 +1,39 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Helika Analytics Service
+  version: 1.0.0
+extends: openapi/helika-events-openapi.json
+actions:
+- target: $.info
+  update:
+    description: >-
+      Helika Analytics Service ingests gameplay and community engagement events.
+      A single POST /events/ operation accepts a batch of typed events
+      (game_id, event_type, event payload) authenticated with an x-api-key
+      header. See https://docs.helika.io/ for the reference.
+    contact:
+      name: Helika
+      url: https://docs.helika.io/
+    x-apievangelist-rating: 3
+- target: $.servers
+  description: >-
+    The published spec omits servers[]; the documented production events host is
+    added here (source: docs.helika.io API reference).
+  update:
+  - url: https://events.analytics.helika.io
+    description: Production events ingestion host
+- target: $.paths['/events/'].post
+  update:
+    description: >-
+      Submit one or more analytics events. Events are batched in the request
+      body under events[]; an optional request id enables client-side dedup.
+- target: $.components.securitySchemes
+  description: >-
+    The x-api-key header is only modeled as a raw parameter in the source spec;
+    this overlay documents it as a formal apiKey security scheme.
+  update:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
+      description: API key issued from the Helika platform.

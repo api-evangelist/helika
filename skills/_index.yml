@@ -1,0 +1,9 @@
+generated: '2026-07-19'
+method: generated
+source: openapi/helika-events-openapi.json
+skills:
+- file: helika-send-events.md
+  name: Send analytics events to Helika
+  api: openapi/helika-events-openapi.json
+  operations:
+  - create_events_events__post

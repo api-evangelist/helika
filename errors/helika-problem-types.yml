@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/helika-events-openapi.json
+format: json
+note: >-
+  Derived from the OpenAPI responses. The API does not use RFC 9457
+  application/problem+json; validation failures return a FastAPI-style
+  HTTPValidationError envelope (detail[] of {loc, msg, type}).
+error_envelope:
+  schema: HTTPValidationError
+  fields:
+  - detail: array of ValidationError { loc[], msg, type }
+problems:
+- status: 422
+  title: Validation Error
+  schema: HTTPValidationError
+  media_type: application/json
+  description: >-
+    Request body failed schema validation (missing required events[]/game_id/
+    event_type/event, or wrong types). Each entry in detail[] identifies the
+    failing field location, a human message, and an error type.
+  source_operation: openapi/helika-events-openapi.json#create_events_events__post
+success_status:
+  status: 200
+  schema: Response
+  fields:
+    message: string
+    status: enum [ok, error, accepted]

@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/helika-events-openapi.json
+note: >-
+  Derived from the published OpenAPI plus a search of the Helika docs. No public
+  status page, SLA, or formal deprecation/versioning policy was found, so no
+  StatusPage or Deprecation pointers are emitted. Current API version is taken
+  from the OpenAPI info.version.
+versioning:
+  scheme: unspecified
+  current: 1.1.1
+  docs: https://docs.helika.io/
+  note: >-
+    OpenAPI info.version is 1.1.1. The live path is /events/ with no version
+    segment; the docs reference historically showed a v1 path prefix.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []

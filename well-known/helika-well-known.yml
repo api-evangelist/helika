@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+note: >-
+  Probed the production API host and the marketing host for the standard
+  /.well-known/ discovery surface. None are published (all 404). No raw files
+  saved; no SecurityTxt pointer emitted.
+hosts:
+- host: https://events.analytics.helika.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://www.helika.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}

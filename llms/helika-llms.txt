@@ -1,0 +1,31 @@
+# Helika
+
+> Helika is a game and brand analytics platform (originally built for web3 and blockchain games) that helps studios, sports teams, and entertainment brands collect and act on player and community engagement data. Its Analytics Service API ingests gameplay and engagement events via a single events endpoint, instrumented by first-party Unity, Unreal Engine, and Web SDKs. Helika also operates Helika Evolve, an AI-character platform for brand-safe interactive characters.
+
+Provider-published llms.txt: https://docs.helika.io/llms.txt (developer docs index, includes OpenAPI reference) and https://www.helika.io/llms.txt (marketing site).
+
+## APIs
+- [Helika Analytics Service](https://docs.helika.io/): POST /events/ event ingestion API, x-api-key header auth. Base URL https://events.analytics.helika.io
+
+## Specs
+- [OpenAPI 3.1 (Helika Analytics Service v1.1.1)](https://raw.githubusercontent.com/api-evangelist/helika/refs/heads/main/openapi/helika-events-openapi.json)
+
+## Docs
+- [Platform Overview / Getting Started](https://docs.helika.io/docs/getting-started)
+- [API Reference — Create Events](https://docs.helika.io/reference/create_event_v1_events_post)
+- [In-Game Integration](https://docs.helika.io/docs/in-game-integration)
+- [Helika Unity SDK](https://docs.helika.io/docs/helika-unity-sdk)
+- [Helika Web SDK](https://docs.helika.io/docs/web-sdk)
+- [Helika Unreal Engine SDK](https://docs.helika.io/docs/helika-unreal-engine-sdk)
+- [Webflow Integration](https://docs.helika.io/docs/webflow)
+
+## SDKs
+- [Helika Web SDK (npm helika-sdk)](https://www.npmjs.com/package/helika-sdk)
+- [Helika Unity SDK](https://github.com/getlidar/helika-unity-sdk)
+- [Helika Unreal Engine SDK](https://github.com/getlidar/helika-ue-sdk)
+
+## Company
+- [Helika](https://www.helika.io/)
+- [Platform login](https://platform.helika.io/)
+- [Contact](https://www.helika.io/contact-us/)
+- [GitHub (getlidar)](https://github.com/getlidar)

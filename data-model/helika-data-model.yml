@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/helika-events-openapi.json
+entities:
+- name: EventRequest
+  description: The request envelope submitted to POST /events/.
+  fields:
+  - {name: id, type: string, required: false, description: Unique identifier for this request (optional).}
+  - {name: events, type: array<Event>, required: true, description: Batch of events to ingest.}
+- name: Event
+  description: A single analytics event.
+  fields:
+  - {name: game_id, type: string, required: true, description: Unique identifier for the game.}
+  - {name: event_type, type: string, required: true, description: The type of event (e.g. game_start, game_end).}
+  - {name: event, type: object, required: true, description: JSON object containing the event data.}
+  - {name: created_at, type: string(date-time), required: false, description: Timestamp of the event.}
+- name: Response
+  description: Success response envelope.
+  fields:
+  - {name: message, type: string, required: true}
+  - {name: status, type: "enum[ok,error,accepted]", required: true}
+relationships:
+- from: EventRequest
+  to: Event
+  kind: has_many
+  via: events

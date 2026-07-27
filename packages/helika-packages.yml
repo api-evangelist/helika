@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/package/helika-sdk
+note: >-
+  First-party Helika client SDKs. The npm web SDK is published by Helika staff
+  (maintainers @helika.io); the Unity, Unreal, and Web SDKs are maintained in
+  the getlidar GitHub organization (Helika was formerly Lidar / getlidar).
+packages:
+- language: javascript
+  registry: npm
+  name: helika-sdk
+  url: https://www.npmjs.com/package/helika-sdk
+  install: npm install helika-sdk
+  version: 0.4.0
+  official: true
+  description: >-
+    Helika Web SDK — make API calls to the Helika DEV and PROD analytics
+    endpoints; top-of-funnel fingerprinting on first click.
+  repository: https://github.com/getlidar/helika-web-sdk
+- language: csharp
+  registry: github-releases
+  name: Helika Unity SDK
+  url: https://github.com/getlidar/helika-unity-sdk
+  install: >-
+    Download Helika.unitypackage from
+    https://github.com/getlidar/helika-unity-sdk-releases/releases and import via
+    Assets > Import Package > Custom Package
+  version: 0.4.0
+  official: true
+  description: Helika Unity SDK for in-game event instrumentation (C#).
+  repository: https://github.com/getlidar/helika-unity-sdk
+- language: cpp
+  registry: github
+  name: Helika Unreal Engine SDK
+  url: https://github.com/getlidar/helika-ue-sdk
+  install: Clone/add the helika-ue-sdk plugin to your Unreal Engine project
+  version: 0.3.0
+  official: true
+  description: Helika Unreal Engine SDK for in-game event instrumentation (C++).
+  repository: https://github.com/getlidar/helika-ue-sdk
