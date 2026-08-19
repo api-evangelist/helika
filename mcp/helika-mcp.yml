@@ -2,16 +2,20 @@ generated: '2026-07-19'
 method: derived
 status: candidate
 source: openapi/helika-events-openapi.json
-note: >-
-  No official hosted/remote Helika MCP server was found in provider docs, the npm
-  registry, or public MCP registries as of this date. This is a derived candidate
-  tool list, one tool per OpenAPI operation, to seed a future MCP surface.
+note: No official hosted/remote Helika MCP server was found in provider docs, the npm registry, or public
+  MCP registries as of this date. This is a derived candidate tool list, one tool per OpenAPI operation,
+  to seed a future MCP surface.
 server:
   name: helika
   transport: http
 tools:
 - name: create_events
-  description: >-
-    Ingest a batch of gameplay/engagement events (game_id, event_type, event
-    payload) into the Helika Analytics Service.
+  description: Ingest a batch of gameplay/engagement events (game_id, event_type, event payload) into
+    the Helika Analytics Service.
   source_operation: openapi/helika-events-openapi.json#create_events_events__post
+deployment:
+  mode: none
+  verified: derived
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census
