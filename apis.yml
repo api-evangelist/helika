@@ -40,6 +40,17 @@ tags:
 - Analytics
 - Game Analytics
 - Web3
+- Event
+- Artificial Intelligence
+- SDK
+- Player Data
+tags_raw:
+- Company
+- Crypto
+- Gaming
+- Analytics
+- Game Analytics
+- Web3
 - Events
 - AI
 - SDK
@@ -51,6 +62,8 @@ apis:
   humanURL: https://docs.helika.io/
   baseURL: https://events.analytics.helika.io
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
