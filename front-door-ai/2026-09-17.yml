@@ -1,0 +1,26 @@
+# Front Door AI Index — helika — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: helika
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.helika.io
+  final_host: www.helika.io
+  ownership: own
+  owner: helika
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 8
+  host_score: 8
+  density: 8.69
+  words: 921
+  tiers:
+    agentic: 2
+    core: 6
+    model: 0
+  ambiguous: 0
+  top_terms:
+    AI: 6
+    chatbot: 2
