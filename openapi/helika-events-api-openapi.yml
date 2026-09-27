@@ -57,6 +57,25 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
 components:
   schemas:
+    StatusEnum:
+      type: string
+      enum:
+      - ok
+      - error
+      - accepted
+      title: StatusEnum
+    Response:
+      properties:
+        message:
+          type: string
+          title: Message
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+      type: object
+      required:
+      - message
+      - status
+      title: Response
     EventRequest:
       properties:
         id:
@@ -99,18 +118,6 @@ components:
       - event_type
       - event
       title: Event
-    Response:
-      properties:
-        message:
-          type: string
-          title: Message
-        status:
-          $ref: '#/components/schemas/StatusEnum'
-      type: object
-      required:
-      - message
-      - status
-      title: Response
     HTTPValidationError:
       properties:
         detail:
@@ -120,13 +127,6 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
-    StatusEnum:
-      type: string
-      enum:
-      - ok
-      - error
-      - accepted
-      title: StatusEnum
     ValidationError:
       properties:
         loc:
