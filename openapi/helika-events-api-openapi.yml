@@ -57,25 +57,6 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
 components:
   schemas:
-    StatusEnum:
-      type: string
-      enum:
-      - ok
-      - error
-      - accepted
-      title: StatusEnum
-    Response:
-      properties:
-        message:
-          type: string
-          title: Message
-        status:
-          $ref: '#/components/schemas/StatusEnum'
-      type: object
-      required:
-      - message
-      - status
-      title: Response
     EventRequest:
       properties:
         id:
@@ -93,6 +74,48 @@ components:
       required:
       - events
       title: EventRequest
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+    Response:
+      properties:
+        message:
+          type: string
+          title: Message
+        status:
+          $ref: '#/components/schemas/StatusEnum'
+      type: object
+      required:
+      - message
+      - status
+      title: Response
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            $ref: '#/components/schemas/ValidationError'
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
     Event:
       properties:
         created_at:
@@ -118,33 +141,10 @@ components:
       - event_type
       - event
       title: Event
-    HTTPValidationError:
-      properties:
-        detail:
-          items:
-            $ref: '#/components/schemas/ValidationError'
-          type: array
-          title: Detail
-      type: object
-      title: HTTPValidationError
-    ValidationError:
-      properties:
-        loc:
-          items:
-            anyOf:
-            - type: string
-            - type: integer
-          type: array
-          title: Location
-        msg:
-          type: string
-          title: Message
-        type:
-          type: string
-          title: Error Type
-      type: object
-      required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
+    StatusEnum:
+      type: string
+      enum:
+      - ok
+      - error
+      - accepted
+      title: StatusEnum
