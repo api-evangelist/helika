@@ -1,0 +1,12 @@
+{
+ "url": "https://events.analytics.helika.io/openapi.json",
+ "requested_url": "https://events.analytics.helika.io/openapi.json",
+ "status": 200,
+ "content_type": "application/json",
+ "bytes": 2626,
+ "sha256": "11095fbbbfbb17badb32cd710fe18042d193c1526ca1b15f0a852f1447cad1fd",
+ "fetched_at": "2026-10-04",
+ "fetched_by": "APIEvangelist-Harvest/1.0 (+https://apievangelist.com)",
+ "match": "equivalent",
+ "note": "Re-fetched from the provider by verify-openapi-sources.py; the provider's current document describes the same operations (Jaccard 1.0), but the bytes differ, so the archive is an earlier or reformatted copy."
+}
