@@ -64,6 +64,110 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Helika is a company surfaced as a portfolio company of pantera-capital and added to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting the enrichment pipeline.
+Helika is a game and brand analytics platform, originally built for web3 and blockchain games, that helps studios, sports teams, and entertainment brands collect, unify, and act on player and community engagement data. Its Analytics Service API ingests gameplay and engagement events through a single events endpoint authenticated with an x-api-key header, and is instrumented by first-party Unity, Unreal Engine, and Web SDKs. Helika has since expanded into Helika Evolve, an AI-character platform that lets IP owners deploy brand-safe interactive characters across Discord, web, and social channels. Helika is a Pantera Capital portfolio company operating in the crypto and gaming sector.
 
-Backed by: pantera-capital — https://www.helika.io/
+**Areas:** Company · Cryptocurrency · Gaming · Analytics · Game Analytics · Web3 · Event · Artificial Intelligence · SDK · Player Data
+
+## Helika on APIs.io
+
+Everything profiled for Helika is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/helika/](https://apis.io/providers/helika/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Helika Events API](https://apis.io/apis/helika/helika-events-api/) — The Events API from Helika — 1 operation(s) for events.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [helika](https://apis.io/servers/helika/helika/)
+
+#### Collections (1)
+
+Postman and Open Collection request collections.
+
+- [Helika Analytics Service Events API](https://apis.io/collections/helika/open-helika-events-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Helika Events Overlay](https://apis.io/overlays/helika/helika-events-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Helika Authentication](https://apis.io/security/helika/helika-authentication/)
+- [Helika Domain Security](https://apis.io/security/helika/helika-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.helika.io/)
+- [Documentation](https://docs.helika.io/docs/getting-started)
+- [Getting started](https://docs.helika.io/docs/getting-started)
+- [API reference](https://docs.helika.io/reference/create_event_v1_events_post)
+- [Support](https://www.helika.io/contact-us/)
+- [Blog](https://www.helika.io/blog/)
+- [Terms of service](https://www.helika.io/terms-of-service/)
+- [Privacy policy](https://www.helika.io/privacy-policy/)
+- [GitHub](https://github.com/getlidar)
+
+## API Evangelist rating
+
+**Kin Score 33.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 38.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 27.6 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/helika/](https://apis.io/providers/helika/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Helika: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/helika/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
